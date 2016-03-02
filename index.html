@@ -9,6 +9,15 @@
   <!-- Get jQuery from Google -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
+  <!-- Load Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Get fonts from Google -->
+  <link href='https://fonts.googleapis.com/css?family=Lato:300|Lobster' rel='stylesheet' type='text/css'>
+
+  <!-- Using reset style sheet to remove all default formatting-->
+  <link rel="stylesheet" href="./static/css/reset.css" />
+
   <!-- Load main stylesheet -->
   <link rel="stylesheet" href="./static/css/index.css" />
 
@@ -17,13 +26,26 @@
 </head>
 
 <body>
-  <div class="pictureContainer">
-    <img id="foodPicture" src="./static/img/mistakeBacon2.png" alt="This would normally be food... What did you do!?">
+
+  <div class="header">
+    <a class="headerText" href="#pictureContainer">Pun Chef</a>
+    <a class="headerAbout" href="#bottomInfo">About</a>
+    <div class="headerBar"></div>
   </div>
 
-  <div class="photoInfo">
-    <a href="http://freefoodphotos.com">Images from: FreeFoodphotos.com</a>
-    <a href="http://creativecommons.org/licenses/by/3.0/deed.en_US">CC Attribution 3.0</a>
+  <div class="pictureContainer" id="pictureContainer">
+    <i id="spinner" class="fa fa-spinner fa-spin fa-4x"></i>
+    <a class="generateButton" id="generateButton">Generate</a>
+  </div>
+
+  <h2 class="pun">Don’t go bacon my heart... I couldn’t if I fried</h2>
+
+  <div id="bottomInfo">
+    <p id="tagline"><em>Cooking up relevant food puns since 2016</em>
+    <p id="about">Made with <i class="fa fa-heart"> in Canada</i></p>
+    <p class="credit">Image credit:</p>
+    <a class="credit" href="http://freefoodphotos.com">FreeFoodphotos.com</a>
+    <a class="credit" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">CC Attribution 3.0</a>
   </div>
 
   <script src="./static/js/foodScript.js"></script>

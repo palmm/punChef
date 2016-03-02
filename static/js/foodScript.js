@@ -3,6 +3,7 @@ var links = new Array();
 
 var foodType = 0;
 var pictureNumber = 0;
+var waitingForPicture = false;
 
 var preLoadedPictures = [];
 var loadingImages = [];
@@ -10,28 +11,29 @@ var loadingImages = [];
 var viewWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
-var googleImageAPI1 = 'https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?url=';
-var googleImageAPI2 = '&container=focus&resize_w=' + viewWidth + '&refresh=2592000';
-
 init();
 
 function init() {
-  // setCSS();
   parseJSON(saveJSONToArray);
+
+  //Only have 2 image sizes for better fetching of cache on image server
+  if (viewWidth >= 1920) {
+    viewWidth = 1920;
+  } else {
+    viewWidth = 1280;
+  }
 }
 
-document.getElementById('foodPicture').onclick = function () {
+document.getElementById('generateButton').onclick = function () {
   // Only change image if there is an image preloaded
   if (preLoadedPictures.length > 0) {
     changeImage(loadPictures(1));
     console.log(preLoadedPictures);
+  } else {
+    showSpinner();
+    waitingForPicture = true;
   }
 }
-
-// function setCSS () {
-//   console.log(viewWidth + 'x' + viewHeight);
-//   $('.pictureContainer').css({height: viewHeight-5, width: viewWidth-5});
-// }
 
 function parseJSON (callback) {
   $.getJSON("./static/other/links.json", function(data) {
@@ -48,7 +50,17 @@ function saveJSONToArray () {
         links[foodTypeNumber] = new Array();
 
         for (var i = 0; i < url.length; i++) {
-          links[foodTypeNumber].push(url[i].url);
+          var unRouted = url[i].url;
+          var routed1, routed2;
+          var totalLink;
+
+          // Routing thorught rsz.io to downsize images and save on image sizes
+          routed1 = unRouted.substring(0, unRouted.indexOf(".com")+4);
+          routed2 = unRouted.substring(unRouted.indexOf(".com")+4, unRouted.length);
+
+          totalLink = routed1 + '.rsz.io' + routed2 + '?width=' + viewWidth;
+
+          links[foodTypeNumber].push(totalLink);
         }
 
         foodTypeNumber = foodTypeNumber + 1;
@@ -66,11 +78,16 @@ function loadPictures (toLoad) {
     loadingImages[i] = new Image();
     generateRandoms(
       function () {
-        loadingImages[i].src = googleImageAPI1 + links[foodType][pictureNumber] + googleImageAPI2;
+        loadingImages[i].src = links[foodType][pictureNumber];
 
         $(loadingImages[i]).on('load', function() {
           preLoadedPictures.push(this);
-          console.log(preLoadedPictures);
+          if(waitingForPicture) {
+            changeImage(loadPictures(1));
+          }
+
+          // TODO: remove (testing)
+          // console.log(preLoadedPictures);
         });
       }
     );
@@ -86,5 +103,22 @@ function generateRandoms (callback) {
 }
 
 function changeImage () {
-  $('#foodPicture').attr('src', preLoadedPictures.pop().src);
+  var image = preLoadedPictures.pop().src;
+  image = 'url(' + image + ')';
+  $('.pictureContainer').css('background-image', image);
+
+  if(waitingForPicture) {
+    waitingForPicture = false;
+    hideSpinner();
+  }
+}
+
+function showSpinner () {
+  $( "#spinner" ).css("display", "inline");
+  console.log("Showing spinner");
+}
+
+function hideSpinner () {
+  $( "#spinner" ).css("display", "none");
+  console.log("hidding spinner");
 }
