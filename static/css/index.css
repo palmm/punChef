@@ -1,4 +1,7 @@
+/*#1A6BA0 */
+
 /*LAYOUT*/
+
 .headerBar {
   z-index: 2;
   position: fixed;
@@ -6,6 +9,23 @@
   width: 100%;
   height: 57px;
   opacity: 0.75;
+}
+
+.moreInfoBar {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  top: 57px;
+  background-color: white;
+  opacity: 0.75;
+  max-height: 0;
+  overflow: hidden;
+
+  -webkit-transition: max-height 0.5s;
+  -moz-transition: max-height 0.5s;
+  -ms-transition: max-height 0.5s;
+  -o-transition: max-height 0.5s;
+  transition: max-height 0.5s;
 }
 
 .headerText {
@@ -16,13 +36,14 @@
 
 .headerAbout {
   position: fixed;
-  left: 250px;
+  left: 255px;
   z-index: 3;
   top: 10px;
+  cursor: pointer;
 }
 
 .pictureContainer {
-  z-index: 1;
+  z-index: -1;
   height: 100vh;
   width: 100vw;
 
@@ -33,15 +54,21 @@
 }
 
 .pun {
-  z-index: 3;
   position: absolute;
-  left: 35px;
-  top: calc(50% - 35px);
-  color: #444;
-  opacity: 0.5;
+
+  width: 100%;
+  height: auto;
+  bottom: 0;
+  text-align: center;
+
+  background-color: white;
+  opacity: 0.66;
+  padding-bottom: 7px;
 }
 
+/*Spinner*/
 .pictureContainer i {
+  z-index: 3;
   display: none;
   position: absolute;
   left: calc(50% - 35px);
@@ -58,10 +85,11 @@
   background: #fb551c;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
+  cursor: pointer;
 
   position: absolute;
-  left: calc(50% - 62.5px);
-  top: 80%;
+  right: calc(0vw + 60px);
+  top: 8px;
 
   z-index: 3;
 }
@@ -75,7 +103,25 @@
   border-style: solid;
 }
 
+.moreInfo {
+  text-align: justify;
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+
+.headerAbout i {
+  transition: transform 0.5s;
+}
+
+.credit {
+  clear: both;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 /*TYPOGRAPHY*/
+
 .headerText {
   font-family: 'Lobster', cursive;
   font-size: 3em;
@@ -83,13 +129,43 @@
   text-decoration: none;
 }
 
-.bottomInfo p,a,i {
+.instruction {
   font-family: 'Lato', sans-serif;
+  font-size: 1.5em;
+  line-height: 1em;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
-h2 {
+.credit {
   font-family: 'Lato', sans-serif;
-  font-size: 5em;
+  font-size: .1em;
+  line-height: 1em;
+}
+
+#copy {
+    margin-left: 5px;
+}
+
+#ccAttrib {
+    margin-left: 5px;
+}
+
+.pun {
+  font-family: 'Lato', sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+
+  /*color: #FDFDFD;*/
+  color: #444;
+
+  /*font stroke*/
+  /*-webkit-text-stroke: .75px #444;
+  text-shadow:
+  -0.75px -0.75px 0 #fff,
+  0.75px -0.75px 0 #fff,
+  -0.75px  0.75px 0 #fff,
+  0.75px  0.75px 0 #fff;*/
 }
 
 .headerAbout {
@@ -100,5 +176,8 @@ h2 {
 }
 
 .headerAbout:hover {
+  /*Safari was giving me trouble with turning my link blue*/
+  -webkit-tap-highlight-color: #fb551c;
   color:#fb551c;
+  text-decoration: none;
 }

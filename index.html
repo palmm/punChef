@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
   <!-- Get fonts from Google -->
-  <link href='https://fonts.googleapis.com/css?family=Lato:300|Lobster' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,700|Lobster' rel='stylesheet' type='text/css'>
 
   <!-- Using reset style sheet to remove all default formatting-->
   <link rel="stylesheet" href="./static/css/reset.css" />
@@ -28,25 +28,29 @@
 <body>
 
   <div class="header">
-    <a class="headerText" href="#pictureContainer">Pun Chef</a>
-    <a class="headerAbout" href="#bottomInfo">About</a>
+    <a class="headerText" href="./index.html">Pun Chef</a>
+    <div class="headerAbout" id="headerAbout">About <i class="fa fa-chevron-down" id="aboutArrow"></i></div>
+
     <div class="headerBar"></div>
+    <div class="moreInfoBar" id="moreInfoBar">
+      <div class="moreInfo" id="moreInfo">
+        <p class="instruction">Click generate to get a picture & pun!</p>
+        <!-- <p id="about">Made with <i class="fa fa-heart-o"></i> in Canada</p> -->
+        <p class="credit">Image credit:</p>
+        <a class="credit" href="http://freefoodphotos.com">FreeFoodphotos.com</a>
+        <p class="credit">under</a>
+        <a class="credit" id="ccAttrib" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">CC Attribution 3.0</a>
+        <p class="credit" id="copy"><i class="fa fa-copyright"></i> 2016 Palmer McCutcheon</p>
+      </div>
+    </div>
   </div>
 
-  <div class="pictureContainer" id="pictureContainer">
+  <div class="pictureContainer" id="picture">
     <i id="spinner" class="fa fa-spinner fa-spin fa-4x"></i>
     <a class="generateButton" id="generateButton">Generate</a>
   </div>
 
-  <h2 class="pun">Don’t go bacon my heart... I couldn’t if I fried</h2>
-
-  <div id="bottomInfo">
-    <p id="tagline"><em>Cooking up relevant food puns since 2016</em>
-    <p id="about">Made with <i class="fa fa-heart"> in Canada</i></p>
-    <p class="credit">Image credit:</p>
-    <a class="credit" href="http://freefoodphotos.com">FreeFoodphotos.com</a>
-    <a class="credit" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">CC Attribution 3.0</a>
-  </div>
+  <div class="pun">Don’t go bacon my heart... I couldn’t if I fried</div>
 
   <script src="./static/js/foodScript.js"></script>
 </body>

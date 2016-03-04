@@ -11,6 +11,8 @@ var loadingImages = [];
 var viewWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
+var aboutTextDown = false;
+
 init();
 
 function init() {
@@ -33,6 +35,19 @@ document.getElementById('generateButton').onclick = function () {
     showSpinner();
     waitingForPicture = true;
   }
+}
+
+document.getElementById('headerAbout').onclick = function () {
+  if(aboutTextDown) {
+    $("#aboutArrow").css("transform", "rotate(0deg)");
+    $("#moreInfoBar").css("max-height", "0px");
+  } else {
+    $("#aboutArrow").css("transform", "rotate(180deg)");
+    $("#moreInfoBar").css("max-height", "70px");
+  }
+
+  console.log(aboutTextDown);
+  aboutTextDown = !aboutTextDown;
 }
 
 function parseJSON (callback) {
@@ -114,11 +129,11 @@ function changeImage () {
 }
 
 function showSpinner () {
-  $( "#spinner" ).css("display", "inline");
+  $("#spinner").css("display", "inline");
   console.log("Showing spinner");
 }
 
 function hideSpinner () {
-  $( "#spinner" ).css("display", "none");
+  $("#spinner").css("display", "none");
   console.log("hidding spinner");
 }
