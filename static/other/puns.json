@@ -1,0 +1,138 @@
+{
+  "bread": {
+    "pun":
+    [
+      {"text":"If you haven't figured out my humour, I have naan."},
+      {"text":"Toasters. Tanning beds for bread."},
+      {"text":"I'd loaf to know what's up with these puns."},
+      {"text":"Got a job at the bakery because I kneaded the dough."}
+    ]
+  },
+  "pasta": {
+    "pun":
+    [
+      {"text":"Fake noodles? That's an impasta."},
+      {"text":"Opposite of pasta? Futura."},
+      {"text":"What do Italians eat on halloween? Fetuccini A-fraid-o."},
+      {"text":"Need a date for the dance? Ask the spaghetti to take you to the meatball."}
+    ]
+  },
+  "egg": {
+    "pun":
+    [
+      {"text":"Yeah I know these puns are egg-straordinarly bad puns."},
+      {"text":"If you're feeling down bring the sunny-side up. The hard times will be over easy."},
+      {"text":"I can't be friends with you anymore, you are such a shell out."},
+      {"text":"That was eggactly what I was looking for."}
+    ]
+  },
+  "donut": {
+    "pun":
+    [
+      {"text":"I really donut understand puns."},
+      {"text":"Donuts always feel a little empty inside."},
+      {"text":"'Can't' is short form for cannot. Why isn't 'don't' short for donut?"},
+      {"text":"I love that donuts are never self centered."}
+    ]
+  },
+  "cheese": {
+    "pun":
+    [
+      {"text":"This cheese isn't yours, it's nacho cheese!"},
+      {"text":"This cheese's favourite music? R & Brie."},
+      {"text":"Man these puns aren't grate. They could be cheddar."},
+      {"text":"The saddest cheese? Blue cheese."}
+    ]
+  },
+  "coffee": {
+    "pun":
+    [
+      {"text":"Where have you bean all my life Coffee?"},
+      {"text":"Can I espresso my feelings?"},
+      {"text":"Where have you bean all my life Coffee?"},
+      {"text":"What a brewtiful cup."}
+    ]
+  },
+  "wine": {
+    "pun":
+    [
+      {"text":"Wine hangover? That's the grape depression."},
+      {"text":"You had me at merlot."},
+      {"text":"Keep your friends close and your wine glass closer."},
+      {"text":"Don't wine too much if these puns are bad."}
+    ]
+  },
+  "apple": {
+    "pun":
+    [
+      {"text":"This is pretty a-peeling."},
+      {"text":"What did the apple say to the almond? You're Nuts!"},
+      {"text":"Dad, do you like baked apples? Yes son, why? The orchard's on fire, Dad."},
+      {"text":"How do you make an apple turnover? Push it down hill."},
+      {"text":"What's worse than finding a worm in your apple? Taking a bite and finding half a worm."}
+    ]
+  },
+  "berry": {
+    "pun":
+    [
+      {"text":"This is berry sweet"},
+      {"text":"What do you call a fruit that can open doors? A key lime."},
+      {"text":"Hmmmm, yes indeed... Berry interesting."},
+      {"text":"Sorry you won't find your currant events here."},
+      {"text":"What did the grape say to the banana? Hi. I am grape. Nice to meet you."}
+    ]
+  },
+  "mushroom": {
+    "pun":
+    [
+      {"text":"Why did the Fungi leave the party? There wasn't mushroom."},
+      {"text":"The Morel of the story is..."},
+      {"text":"What would a mushroom car say? Shroom shroom!"},
+      {"text":"Why does everyone like the mushroom? He's a fungi!"}
+    ]
+  },
+  "carrot": {
+    "pun":
+    [
+      {"text":"Don't like this? I don't even carrot all."},
+      {"text":"What's a vegetables favorite martial art? Carrotee!"},
+      {"text":"What did one snowman say to the other? Does it smell like carrots?"}
+    ]
+  },
+  "corn": {
+    "pun":
+    [
+      {"text":"What did the baby corn say to the mommy corn? Where's popcorn?"},
+      {"text":"What did the corn say when he got complimented? Aw, shucks!"},
+      {"text":"Don't tell a secrets in a cornfield. There's too many ears."},
+      {"text":"Being lost in a corn maze: cornered."}
+    ]
+  },
+  "fish": {
+    "pun":
+    [
+      {"text":"Not bad... Cod do better!"},
+      {"text":"Keep friends close, anenomes closer."},
+      {"text":"What a load of carp!"},
+      {"text":"If you think of a pun, let minnow."},
+      {"text":"Taste funny? That's the clown fish."},
+      {"text":"Make a fish pun just for the halibut."},
+      {"text":"We should dolphinitely scale back on the fish puns."},
+      {"text":"This is seriously the best site ever! Not even squidding!"},
+      {"text":"I trout I could mak-o it on Comedy Central..."}
+    ]
+  },
+  "steak": {
+    "pun":
+    [
+      {"text":"The steaks have never been higher."},
+      {"text":"Becoming a vegetarian? That's a missed steak."},
+      {"text":"My grandfather was a knight... His name was Sir Loin."},
+      {"text":"Did you hear the rumor about the steak? It's pretty juicy."},
+      {"text":"The Hills Have Rib-Eyes (2006)"},
+      {"text":"Becoming a vegetarian? That's a missed steak."},
+      {"text":"So rare you could sell it as a collectable!"},
+      {"text":"Steak puns - a medium where anything well done is rare."}
+    ]
+  }
+}
