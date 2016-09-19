@@ -1,4 +1,4 @@
 # punChef.com
-WIP Food Caption Project
+Food Caption Project
 
-Fetches picture of food and relevant food pun.
+Fetches picture of food and generates random relevant food pun.
